@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.idea/
+.vscode/
+
+# Specific to this project based on `git status` output
+.python-version
+Modelfile
+data/
+pyproject.toml
+unsloth_compiled_cache/
+uv.lock
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# OS-specific
+.DS_Store
+.env
