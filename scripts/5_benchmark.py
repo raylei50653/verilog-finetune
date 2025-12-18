@@ -5,7 +5,7 @@ import json
 import time
 
 # Configuration
-MODEL_NAME = "verilog-llama3"
+MODEL_NAME = "verilog-llama3-q3"
 OUTPUT_DIR = "benchmark_results"
 
 # Benchmark Prompts (Levels 1-4)
