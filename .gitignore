@@ -10,15 +10,21 @@ venv/
 .idea/
 .vscode/
 
-# Specific to this project based on `git status` output
+# Project dependencies
 .python-version
-Modelfile
-data/
 pyproject.toml
-unsloth_compiled_cache/
 uv.lock
 
-# Logs and databases
+# Data and Models (Large files)
+data/
+gguf_models/*.gguf
+hf_cache/
+unsloth_compiled_cache/
+outputs/
+outputs_mg/
+
+# Benchmarks and Logs
+benchmark_results/
 *.log
 *.sqlite
 *.db

@@ -1,0 +1,15 @@
+FROM ./gguf_models/verilog-llama-3-8b.Q4_K_M.gguf
+SYSTEM "Below is an instruction that describes a hardware design task. Write the corresponding Verilog code."
+TEMPLATE """{{ .System }}
+
+### Instruction:
+{{ .Prompt }}
+
+### Input:
+
+
+### Response:
+"""
+PARAMETER stop "<|end_of_text|>"
+PARAMETER stop "### Instruction:"
+PARAMETER stop "### Response:"
