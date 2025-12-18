@@ -32,3 +32,5 @@ benchmark_results/
 # OS-specific
 .DS_Store
 .env
+llama.cpp/
+models/
