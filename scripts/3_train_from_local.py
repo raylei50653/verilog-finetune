@@ -82,12 +82,9 @@ print(f"   GPU: {gpu_stats.name}. Max Memory: {gpu_stats.total_memory / 1024**3:
 trainer_stats = trainer.train()
 
 # ==========================================
-# 5. 儲存與轉檔
+# 5. 儲存 LoRA Adapter
 # ==========================================
-print("💾 儲存 GGUF 模型中 (這會花一點時間)...")
-# 儲存 LoRA adapter
-model.save_pretrained("models/lora_adapters")
-
-# 轉換並儲存為 GGUF (q4_k_m)
-model.save_pretrained_gguf(output_dir, tokenizer, quantization_method = "q4_k_m")
-print(f"✅ 全部完成！模型已儲存至 {output_dir}")
+print("💾 儲存 LoRA adapter...")
+model.save_pretrained("outputs/final_adapter")
+tokenizer.save_pretrained("outputs/final_adapter")
+print(f"✅ 訓練完成！Adapter 已儲存至 outputs/final_adapter")
